@@ -1,5 +1,7 @@
 #Ajout de call Agent de file d'attente
+# UPN1 et UPN2 rpresentent les Userprincipalname des deux comptes azure AD 
 # sous powershelle connect-microsoftteams
+
 $objectid1=(Get-msoluser -identity UPN1). ObjectId
 $objectid2=(Get-msoluser -identity UPN2). ObjectId
 $identity=(get-cscallqueue -filtername <Diplayname of Call Queu). Identity
