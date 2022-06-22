@@ -1,0 +1,5 @@
+#Ajout de call Agent de file d'attente
+$objectid1=(Get-msoluser -identity UPN1). ObjectId
+$objectid2=(Get-msoluser -identity UPN2). ObjectId
+$identity=(get-cscallqueue -filtername <Diplayname of Call Queu). Identity
+Set-cscallqueue -identity $identity -Users @($objectid1,$objectid2)
